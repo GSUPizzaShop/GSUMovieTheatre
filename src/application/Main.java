@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -32,24 +33,36 @@ public class Main extends Application {
 		this.stage = stage;
 		stage.setTitle("GSU Movie Tickets");
 		
-		theatreListLabel = new Label("Select Theatre: ");
+		theatreListLabel = new Label("Theatre: ");
 		theatreListLabel.setMinWidth(75);
+		theatreListLabel.setStyle("-fx-font: 22 Arial;");
 		
-		movieListLabel = new Label("Select Movie: ");
+		movieListLabel = new Label("Movie: ");
 		movieListLabel.setMinWidth(75);
+		movieListLabel.setStyle("-fx-font: 22 Arial;");
 		
-		numofTicketsLabel = new Label("Number of Tickets: ");
-		//numofTicketsLabel.setMinWidth(75);
-		//numofTickets.setPrefColumnCount(4);
+		numofTicketsLabel = new Label("Tickets: ");
+		numofTicketsLabel.setMinWidth(75);
+		numofTicketsLabel.setStyle("-fx-font: 22 Arial;");
+		
+		numofTickets = new TextField();
+		numofTickets.setPrefColumnCount(4);
+		numofTickets.setTooltip(new Tooltip("Enter number of tickets"));
 		
 		purchase = new Button("Purchase Tickets");
+		purchase.setStyle("-fx-font: 22 Arial; -fx-base:#a99260; "); 
+		
 		cancel = new Button("Cancel");
+		cancel.setStyle("-fx-font: 22 Arial; -fx-base:#a99260; "); 
+		
 		purchase.setOnAction(e->displayResults());
 		cancel.setOnAction(e-> close());
 		
 		theatreChoiceBox = new ChoiceBox(FXCollections.observableArrayList("AMC", "Regal", "Carmike"));
+		theatreChoiceBox.setTooltip(new Tooltip("Select Theatre"));
 		
 		movieChoiceBox = new ChoiceBox(FXCollections.observableArrayList("Daddy's Home 2", "IT", "Thor Ragnarok", "Geostorm", "Murder on the Orient Express"));
+		movieChoiceBox.setTooltip(new Tooltip("Select Movie"));
 		
 		theatreListBox = new HBox();
 		theatreListBox.setMinWidth(20);
@@ -64,8 +77,9 @@ public class Main extends Application {
 		numofTicketsBox.getChildren().addAll(numofTicketsLabel,numofTickets);
 		
 		buttonBox = new HBox();
+		buttonBox.getChildren().addAll(purchase, cancel);
 		
-		sceneBox = new VBox(10, theatreListBox, numofTicketsBox,buttonBox,movieListBox);
+		sceneBox = new VBox(10, theatreListBox,movieListBox, numofTicketsBox,buttonBox);
 		sceneBox.setPadding(new Insets(30,20,30,20));
 		
 		Scene scene = new Scene(sceneBox, 440, 280);
