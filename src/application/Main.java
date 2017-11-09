@@ -10,6 +10,8 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -52,9 +54,10 @@ public class Main extends Application {
 		purchase = new Button("Purchase Tickets");
 		purchase.setStyle("-fx-font: 22 Arial; -fx-base:#a99260; "); 
 		
-		cancel = new Button("Cancel");
+		Image cancelImage = new Image("/images/cancelIcon.png",20,20,false,false);
+		cancel = new Button("Cancel", new ImageView(cancelImage));
 		cancel.setStyle("-fx-font: 22 Arial; -fx-base:#a99260; "); 
-		
+	
 		purchase.setOnAction(e->displayResults());
 		cancel.setOnAction(e-> close());
 		
@@ -99,6 +102,9 @@ public class Main extends Application {
 
 	private Object displayResults() {
 		// TODO Auto-generated method stub
-		return null;
+		double price = 7.50;
+		double total = 0;
+		int tickets = 0;
+		String movie = movieChoiceBox.
 	}
 }
