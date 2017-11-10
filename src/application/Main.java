@@ -15,8 +15,10 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.DialogPane;
 import javafx.scene.control.Label;
+import javafx.scene.control.SingleSelectionModel;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
@@ -33,7 +35,8 @@ public class Main extends Application {
 	private VBox sceneBox;
 	private HBox movieListBox, theatreListBox, numofTicketsBox, buttonBox;
 	private Label movieListLabel, theatreListLabel, numofTicketsLabel;
-	private ChoiceBox<String> amcChoiceBox, regalChoiceBox, carmikeChoiceBox, theatreChoiceBox,numofTickets;
+	
+	private ChoiceBox<String> regalChoiceBox, carmikeChoiceBox, theatreChoiceBox,numofTickets, amcChoiceBox;
 	private Button purchase,cancel;
 	Image cancelImage = new Image("/images/cancelIcon.png",20,20,false,false);
 	Image logo = new Image("/images/GSULOGO.png",50,50,false,false);
@@ -84,7 +87,6 @@ public class Main extends Application {
 		carmikeChoiceBox.setTooltip(new Tooltip("Select Movie"));
 		
 		numofTickets = new ChoiceBox(FXCollections.observableArrayList(1,2,3,4,5,6,7,8,9,10));
-		
 		
 		theatreListBox = new HBox();
 		theatreListBox.setMinWidth(20);
@@ -161,27 +163,27 @@ public class Main extends Application {
 				String th = "AMC";
 				price = amcPrice;
 				total = price * tickets;
-				alert.setContentText("Theatre: \n" + th + "\nYou selected: \n" + movie + "\nNum of Tickets: " + tickets + "\nTotal: $" + total);
+				alert.setContentText("Theatre: \n" + th + "\nMovie: \n" + movie + "\nNum of Tickets: " + tickets + "\nTotal: $" + total);
 				alert.showAndWait();
-				System.out.println("Theatre: \n" + th +"\nYou selected: \n" + movie + "\nNum of Tickets: " + tickets + "\nTotal: $" + total);
+				System.out.println("Theatre: \n" + th + "\nMovie: \n" + movie + "\nNum of Tickets: " + tickets + "\nTotal: $" + total);
 				System.exit(0);
 			}
 			else if(theatre == "Regal" ) {
 				String th = "Regal";
 				price = regalPrice;
 				total = price * tickets;
-				alert.setContentText("Theatre: \n" + th +"\nYou selected: \n" + movie + "\nNum of Tickets: " + tickets + "\nTotal: $" + total);
+				alert.setContentText("Theatre: \n" + th + "\nMovie: \n" + movie + "\nNum of Tickets: " + tickets + "\nTotal: $" + total);
 				alert.showAndWait();
-				System.out.println("Theatre: \n" + th +"\nYou selected: \n" + movie + "\nNum of Tickets: " + tickets + "\nTotal: $" + total);
+				System.out.println("Theatre: \n" + th + "\nMovie: \n" + movie + "\nNum of Tickets: " + tickets + "\nTotal: $" + total);
 				System.exit(0);
 			}
 			else if(theatre == "Carmike" ) {
 				String th = "Carmike";
 				price = carmikePrice;
 				total = price * tickets;
-				alert.setContentText("Theatre: \n" + th +"\nYou selected: \n" + movie + "\nNum of Tickets: " + tickets + "\nTotal: $" + total);
+				alert.setContentText("Theatre: \n" + th + "\nMovie: \n" + movie + "\nNum of Tickets: " + tickets + "\nTotal: $" + total);
 				alert.showAndWait();
-				System.out.println("Theatre: \n" + th +"\nYou selected: \n" + movie + "\nNum of Tickets: " + tickets + "\nTotal: $" + total);
+				System.out.println("Theatre: \n" + th + "\nMovie: \n" + movie + "\nNum of Tickets: " + tickets + "\nTotal: $" + total);
 				System.exit(0);
 			}
 		}
