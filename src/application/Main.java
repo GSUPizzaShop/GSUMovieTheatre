@@ -105,6 +105,7 @@ public class Main extends Application {
 		double price = 7.50;
 		double total = 0;
 		int tickets = 0;
-		String movie = movieChoiceBox.
+		
+		return price;
 	}
 }
