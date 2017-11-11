@@ -33,10 +33,9 @@ import javafx.scene.paint.Color;
 public class Main extends Application {
 	private Stage stage;
 	private VBox sceneBox;
-	private HBox movieListBox, theatreListBox, numofTicketsBox, buttonBox;
-	private Label movieListLabel, theatreListLabel, numofTicketsLabel;
-	
-	private ChoiceBox<String> regalChoiceBox, carmikeChoiceBox, theatreChoiceBox,numofTickets, amcChoiceBox;
+	private HBox movieListBox, theatreListBox, numofTicketsBox, buttonBox, time;
+	private Label movieListLabel, theatreListLabel, numofTicketsLabel, timeLabel;
+	private ChoiceBox<String> regalChoiceBox, carmikeChoiceBox, theatreChoiceBox,numofTickets, amcChoiceBox, timeBox;
 	private Button purchase,cancel;
 	Image cancelImage = new Image("/images/cancelIcon.png",20,20,false,false);
 	Image logo = new Image("/images/GSULOGO.png",50,50,false,false);
@@ -50,30 +49,43 @@ public class Main extends Application {
 		this.stage = stage;
 		stage.setTitle("GSU Movie Tickets");
 		
+		//label for theatre choice box
 		theatreListLabel = new Label("Theatre: ");
 		theatreListLabel.setMinWidth(75);
 		theatreListLabel.setStyle("-fx-font: 22 Arial;");
 		theatreListLabel.setTextFill(Color.GOLDENROD);
 		
+		//label for movie choice box
 		movieListLabel = new Label("Movie: ");
 		movieListLabel.setMinWidth(75);
 		movieListLabel.setStyle("-fx-font: 22 Arial;");
 		movieListLabel.setTextFill(Color.GOLDENROD);
 		
+		//label for ticket choice box
 		numofTicketsLabel = new Label("Tickets: ");
 		numofTicketsLabel.setMinWidth(75);
 		numofTicketsLabel.setStyle("-fx-font: 22 Arial;");
 		numofTicketsLabel.setTextFill(Color.GOLDENROD);
 		
+		//label for time choice box
+		timeLabel = new Label("Time: ");
+		timeLabel.setMinWidth(75);
+		timeLabel.setStyle("-fx-font: 22 Arial;");
+		timeLabel.setTextFill(Color.GOLDENROD);
+		
+		//button to submit purchase
 		purchase = new Button("Purchase Tickets");
 		purchase.setStyle("-fx-font: 22 Arial; -fx-base:#a99260; "); 
 		
+		//cancel order if needed
 		cancel = new Button("Cancel", new ImageView(cancelImage));
 		cancel.setStyle("-fx-font: 22 Arial; -fx-base:#a99260; "); 
-	
+		
+		//methods for when the button is pressed
 		purchase.setOnAction(e->displayResults());
 		cancel.setOnAction(e-> close());
 		
+		//choice boxes to select different theatre, different movies, number of tickets and time
 		theatreChoiceBox = new ChoiceBox(FXCollections.observableArrayList("AMC", "Regal", "Carmike"));
 		theatreChoiceBox.setTooltip(new Tooltip("Select Theatre"));
 		
@@ -88,6 +100,8 @@ public class Main extends Application {
 		
 		numofTickets = new ChoiceBox(FXCollections.observableArrayList(1,2,3,4,5,6,7,8,9,10));
 		
+		timeBox = new ChoiceBox(FXCollections.observableArrayList("12:00","12:45", "1:30", "2:15", "2:50", "3:35", "4:15", "4:30", "4:45", "6:30", "7:15", "8:30", "9:15"));
+		
 		theatreListBox = new HBox();
 		theatreListBox.setMinWidth(20);
 		theatreListBox.getChildren().addAll(theatreListLabel,theatreChoiceBox);
@@ -96,16 +110,19 @@ public class Main extends Application {
 		movieListBox.setMinWidth(20);
 		movieListBox.getChildren().addAll(movieListLabel, amcChoiceBox);
 		
-		
 		numofTicketsBox = new HBox();
 		numofTicketsBox.setMinWidth(20);
 		numofTicketsBox.getChildren().addAll(numofTicketsLabel,numofTickets);
+		
+		time = new HBox();
+		time.setMinWidth(20);
+		time.getChildren().addAll(timeLabel, timeBox);
 		
 		buttonBox = new HBox();
 		buttonBox.getChildren().addAll(purchase, cancel);
 		buttonBox.setAlignment(Pos.CENTER);
 		
-		sceneBox = new VBox(10, theatreListBox,movieListBox, numofTicketsBox,buttonBox);
+		sceneBox = new VBox(10, theatreListBox,movieListBox, numofTicketsBox,time,buttonBox);
 		sceneBox.setPadding(new Insets(30,20,30,20));
 		root.getChildren().addAll(sceneBox);
 		root.setStyle("-fx-background-color: #041e42;");
@@ -144,6 +161,7 @@ public class Main extends Application {
 		double price, total = 0;
 		String movie = amcChoiceBox.getSelectionModel().getSelectedItem();
 		int tickets = (numofTickets.getSelectionModel().getSelectedIndex()) + 1;
+		String time = timeBox.getSelectionModel().getSelectedItem();
 		Alert alert = new Alert(AlertType.INFORMATION);
 		Alert err = new Alert(AlertType.WARNING);
 		alert.setTitle("Ticket Confirmation");
@@ -154,7 +172,7 @@ public class Main extends Application {
 		err.setHeaderText("WARNING");
 		err.setGraphic(new ImageView(logo));
 		
-		if(theatre == "" || movie == "" || tickets == 0) {
+		if(theatre == "" || movie == "" || tickets == 0 || time == "") {
 			err.setContentText("You left something empty, review your order");
 			err.showAndWait();
 		}
@@ -163,27 +181,27 @@ public class Main extends Application {
 				String th = "AMC";
 				price = amcPrice;
 				total = price * tickets;
-				alert.setContentText("Theatre: \n" + th + "\nMovie: \n" + movie + "\nNum of Tickets: " + tickets + "\nTotal: $" + total);
+				alert.setContentText("Theatre: \n" + th + "\nMovie: \n" + movie + "\nTime: " + time + "pm\nNum of Tickets: " + tickets + "\nTotal: $" + total);
 				alert.showAndWait();
-				System.out.println("Theatre: \n" + th + "\nMovie: \n" + movie + "\nNum of Tickets: " + tickets + "\nTotal: $" + total);
+				System.out.println("Theatre: \n" + th + "\nMovie: \n" + movie + "\nTime: " + time + "pm\nNum of Tickets: " + tickets + "\nTotal: $" + total);
 				System.exit(0);
 			}
 			else if(theatre == "Regal" ) {
 				String th = "Regal";
 				price = regalPrice;
 				total = price * tickets;
-				alert.setContentText("Theatre: \n" + th + "\nMovie: \n" + movie + "\nNum of Tickets: " + tickets + "\nTotal: $" + total);
+				alert.setContentText("Theatre: \n" + th + "\nMovie: \n" + movie + "\nTime: " + time + "pm\nNum of Tickets: " + tickets + "\nTotal: $" + total);
 				alert.showAndWait();
-				System.out.println("Theatre: \n" + th + "\nMovie: \n" + movie + "\nNum of Tickets: " + tickets + "\nTotal: $" + total);
+				System.out.println("Theatre: \n" + th + "\nMovie: \n" + movie + "\nTime: " + time + "pm\nNum of Tickets: " + tickets + "\nTotal: $" + total);
 				System.exit(0);
 			}
 			else if(theatre == "Carmike" ) {
 				String th = "Carmike";
 				price = carmikePrice;
 				total = price * tickets;
-				alert.setContentText("Theatre: \n" + th + "\nMovie: \n" + movie + "\nNum of Tickets: " + tickets + "\nTotal: $" + total);
+				alert.setContentText("Theatre: \n" + th + "\nMovie: \n" + movie + "\nTime: " + time + "pm\nNum of Tickets: " + tickets + "\nTotal: $" + total);
 				alert.showAndWait();
-				System.out.println("Theatre: \n" + th + "\nMovie: \n" + movie + "\nNum of Tickets: " + tickets + "\nTotal: $" + total);
+				System.out.println("Theatre: \n" + th + "\nMovie: \n" + movie + "\nTime: " + time + "pm\nNum of Tickets: " + tickets + "\nTotal: $" + total);
 				System.exit(0);
 			}
 		}
