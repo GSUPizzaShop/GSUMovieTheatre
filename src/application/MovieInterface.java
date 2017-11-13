@@ -4,8 +4,7 @@ public interface MovieInterface {
 	String getTheatre();
 	void setTheatre(String t);
 	int getTotal();
+	void setTickets();
 	int getTickets();
-	void registerObservers(StateObserver o);
-	void removeObservers(StateObserver o);
-	int getState();
+	
 }
