@@ -178,31 +178,22 @@ public class Main extends Application {
 		}
 		else {
 			if(theater == "AMC" ) {
-				String th = "AMC";
-				price = amcPrice;
-				total = price * tickets;
-				alert.setContentText("Theater: " + th + "\nMovie: " + movie + "\nTime: " + time + "pm\nNum of Tickets: " + tickets + "\nTotal: $" + total);
+				MovieTheater amc = new FromAMC();
+				
+				alert.setContentText("Theater: " + amc.getName() + "\nMovie: " + amc.getMovie(movie) + "\nTime: " + amc.getTime(time) + "pm\nNum of Tickets: " + amc.getTickets(tickets) + "\nTotal: $" + amc.getTotal());
 				alert.showAndWait();
-				System.out.println("Theater: " + th + "\nMovie: " + movie + "\nTime: " + time + "pm\nNum of Tickets: " + tickets + "\nTotal: $" + total);
-				System.exit(0);
 			}
 			else if(theater == "Regal" ) {
-				String th = "Regal";
-				price = regalPrice;
-				total = price * tickets;
-				alert.setContentText("Theater: " + th + "\nMovie: " + movie + "\nTime: " + time + "pm\nNum of Tickets: " + tickets + "\nTotal: $" + total);
+				MovieTheater reg = new FromRegal();
+				
+				alert.setContentText("Theater: " + reg.getName() + "\nMovie: " + reg.getMovie(movie) + "\nTime: " + reg.getTime(time) + "pm\nNum of Tickets: " + reg.getTickets(tickets) + "\nTotal: $" + reg.getTotal());
 				alert.showAndWait();
-				System.out.println("Theater: " + th + "\nMovie: " + movie + "\nTime: " + time + "pm\nNum of Tickets: " + tickets + "\nTotal: $" + total);
-				System.exit(0);
 			}
 			else if(theater == "Carmike" ) {
-				String th = "Carmike";
-				price = carmikePrice;
-				total = price * tickets;
-				alert.setContentText("Theater: " + th + "\nMovie: " + movie + "\nTime: " + time + "pm\nNum of Tickets: " + tickets + "\nTotal: $" + total);
+				MovieTheater car = new FromCarmike();
+				
+				alert.setContentText("Theater: " + car.getName() + "\nMovie: " + car.getMovie(movie) + "\nTime: " + car.getTime(time) + "pm\nNum of Tickets: " + car.getTickets(tickets) + "\nTotal: $" + car.getTotal());
 				alert.showAndWait();
-				System.out.println("Theater: " + th + "\nMovie: " + movie + "\nTime: " + time + "pm\nNum of Tickets: " + tickets + "\nTotal: $" + total);
-				System.exit(0);
 			}
 		}
 		return total;

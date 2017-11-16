@@ -3,6 +3,7 @@ package application;
 public class FromAMC implements MovieTheater{
 	double price = 7.25;
 	int tickets;
+	String time;
 	
 	@Override
 	public double getPrice(double p) {
@@ -13,20 +14,29 @@ public class FromAMC implements MovieTheater{
 
 	@Override
 	public double getTotal() {
-		// TODO Auto-generated method stub
 		return (int) (price * tickets);
 	}
 
 	@Override
-	public int getTickets() {
+	public int getTickets(int t) {
 		// TODO Auto-generated method stub
-		return 0;
+		this.tickets = t;
+		return tickets;
 	}
 
 	@Override
 	public String getMovie(String m) {
 		// TODO Auto-generated method stub
-		return null;
+		return m;
+	}
+	
+	public String getName() {
+		return "AMC";
+	}
+	
+	public String getTime(String t) {
+		this.time = t;
+		return time;
 	}
 
 }

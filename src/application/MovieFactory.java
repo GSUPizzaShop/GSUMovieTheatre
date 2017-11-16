@@ -78,7 +78,7 @@ public class MovieFactory implements MovieInterface{
 		// TODO Auto-generated method stub
 		state = 7;
 		notifyStateObservers();
-		return theater.getTickets();
+		return theater.getTickets(tickets);
 	}
 
 	@Override
@@ -147,6 +147,7 @@ public class MovieFactory implements MovieInterface{
 			observer.update();
 		}
 	}
+	
 	//Singleton method for only 1 instance at a time
 	public synchronized static MovieFactory getInstance() {
 		if(movie == null) {
