@@ -6,8 +6,12 @@ public interface MovieTheater {
 
 	double getTotal();
 
-	int getTickets();
+	int getTickets(int t);
 
 	String getMovie(String m);
+	
+	String getName();
+	
+	String getTime(String t);
 
 }
