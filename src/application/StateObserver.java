@@ -1,6 +1,5 @@
 package application;
 
-public abstract class StateObserver {
-	protected MovieFactory movie;
-	abstract void update();
+public interface StateObserver {
+	void update();
 }
