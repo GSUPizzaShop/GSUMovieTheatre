@@ -35,7 +35,7 @@ public class Main extends Application {
 	private VBox sceneBox;
 	private HBox movieListBox, theaterListBox, numofTicketsBox, buttonBox, time;
 	private Label movieListLabel, theaterListLabel, numofTicketsLabel, timeLabel;
-	private ChoiceBox<String> regalChoiceBox, carmikeChoiceBox, theaterChoiceBox,numofTickets, amcChoiceBox, timeBox;
+	private ChoiceBox<String> regalChoiceBox, carmikeChoiceBox, theaterChoiceBox,numofTickets, amcChoiceBox, timeBox, blankChoicebox;
 	private Button purchase,cancel;
 	Image cancelImage = new Image("/images/cancelIcon.png",20,20,false,false);
 	Image logo = new Image("/images/GSULOGO.png",50,50,false,false);
@@ -89,15 +89,23 @@ public class Main extends Application {
 		theaterChoiceBox = new ChoiceBox(FXCollections.observableArrayList("AMC", "Regal", "Carmike"));
 		theaterChoiceBox.setTooltip(new Tooltip("Select Theatre"));
 		
+		String theater = theaterChoiceBox.getSelectionModel().getSelectedItem();
+		
+		if(theater == "AMC"){
 		amcChoiceBox = new ChoiceBox(FXCollections.observableArrayList("Daddy's Home 2", "IT", "Thor Ragnarok", "Geostorm", "Murder on the Orient Express"));
 		amcChoiceBox.setTooltip(new Tooltip("Select Movie"));
-		
+		}
+		else if(theater == "Regal"){
 		regalChoiceBox = new ChoiceBox(FXCollections.observableArrayList("Bad Moms Christmas", "IT", "Thor Ragnarok", "Jigsaw", "Boo A Madea Halloween"));
 		regalChoiceBox.setTooltip(new Tooltip("Select Movie"));
-		
+		}else if(theater == "Carmike"){
 		carmikeChoiceBox = new ChoiceBox(FXCollections.observableArrayList("Bad Moms Christmas", "Daddy's Home 2", "Thor Ragnarok", "Jigsaw", "Geostorm"));
 		carmikeChoiceBox.setTooltip(new Tooltip("Select Movie"));
-		
+		}else {
+			blankChoiceBox = new ChoiceBox(FXCollections.observableArrayList("   ");
+			blankChoiceBox.setTooltip(new Tooltip("Select Movie"));
+		}
+			
 		numofTickets = new ChoiceBox(FXCollections.observableArrayList(1,2,3,4,5,6,7,8,9,10));
 		
 		timeBox = new ChoiceBox(FXCollections.observableArrayList("12:00","12:45", "1:30", "2:15", "2:50", "3:35", "4:15", "4:30", "4:45", "6:30", "7:15", "8:30", "9:15"));
