@@ -1,7 +1,7 @@
 package application;
 
 public class FromRegal implements MovieTheater{
-	double price = 7.25;
+	double price = 6.50;
 	int tickets;
 	String time;
 	

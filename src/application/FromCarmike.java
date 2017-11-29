@@ -1,7 +1,7 @@
 package application;
 
 public class FromCarmike implements MovieTheater{
-	double price = 7.25;
+	double price = 8.25;
 	int tickets;
 	String time;
 	
