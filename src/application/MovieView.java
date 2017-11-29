@@ -95,9 +95,7 @@ public class MovieView implements StateObserver {
 		
 		//choice boxes to select different theater, different movies, number of tickets and time
 		theaterChoiceBox = new ChoiceBox(FXCollections.observableArrayList("AMC", "Regal", "Carmike"));
-		theaterChoiceBox.setTooltip(new Tooltip("Select Theatre"));
-		
-		String theater = theaterChoiceBox.getSelectionModel().getSelectedItem();		
+		theaterChoiceBox.setTooltip(new Tooltip("Select Theatre"));	
 		
 		theaterListBox = new HBox();
 		theaterListBox.setMinWidth(20);
@@ -159,7 +157,6 @@ public class MovieView implements StateObserver {
 	}
 	
 	private Object close() {
-		// TODO Auto-generated method stub
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("Confirm Cancel");
 		alert.setHeaderText("Confirm Cancel");
@@ -215,6 +212,7 @@ public class MovieView implements StateObserver {
 				alert.showAndWait();
 			}
 		}
+		System.exit(0);
 		return total;
 	}
 }
