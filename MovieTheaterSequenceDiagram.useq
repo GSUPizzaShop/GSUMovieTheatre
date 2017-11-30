@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.1" icons="true" automaticImage="PNG" generate-combined-fragments="true">  
+  <object id="1" language="java" name="application.FromAMC" project="GSUMovieTheatre" 
+    file="/GSUMovieTheatre/src/application/FromAMC.java" binary="false" label="fromAMC" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="177" y="0"/>    
+    <execution id="2">      
+      <position height="81" width="110" x="5" y="125"/>    
+    </execution>    
+    <execution id="5">      
+      <position height="81" width="110" x="5" y="262"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="81" width="110" x="5" y="419"/>    
+    </execution>    
+    <execution id="11">      
+      <position height="81" width="110" x="5" y="548"/>    
+    </execution>    
+    <execution id="14">      
+      <position height="81" width="110" x="5" y="691"/>    
+    </execution>    
+    <execution id="17">      
+      <position height="81" width="110" x="5" y="811"/>    
+    </execution>  
+  </object>  
+  <object id="20" language="java" name="application.FromCarmike" project="GSUMovieTheatre" 
+    file="/GSUMovieTheatre/src/application/FromCarmike.java" binary="false" label="fromCarmike" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="241" y="0"/>    
+    <execution id="21">      
+      <position height="81" width="142" x="119" y="125"/>    
+    </execution>    
+    <execution id="24">      
+      <position height="81" width="142" x="119" y="230"/>    
+    </execution>    
+    <execution id="27">      
+      <position height="81" width="142" x="119" y="354"/>    
+    </execution>    
+    <execution id="30">      
+      <position height="81" width="142" x="119" y="498"/>    
+    </execution>    
+    <execution id="33">      
+      <position height="81" width="142" x="119" y="622"/>    
+    </execution>    
+    <execution id="36">      
+      <position height="81" width="142" x="119" y="767"/>    
+    </execution>  
+  </object>  
+  <object id="39" language="java" name="application.FromRegal" project="GSUMovieTheatre" 
+    file="/GSUMovieTheatre/src/application/FromRegal.java" binary="false" label="fromRegal" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="358" y="0"/>    
+    <execution id="40">      
+      <position height="81" width="119" x="265" y="179"/>    
+    </execution>    
+    <execution id="43">      
+      <position height="81" width="119" x="265" y="315"/>    
+    </execution>    
+    <execution id="46">      
+      <position height="81" width="119" x="265" y="462"/>    
+    </execution>    
+    <execution id="49">      
+      <position height="81" width="119" x="265" y="601"/>    
+    </execution>    
+    <execution id="52">      
+      <position height="81" width="119" x="265" y="735"/>    
+    </execution>    
+    <execution id="55">      
+      <position height="81" width="119" x="265" y="853"/>    
+    </execution>  
+  </object>  
+  <object id="58" language="java" name="application.NullTheater" project="GSUMovieTheatre" 
+    file="/GSUMovieTheatre/src/application/NullTheater.java" binary="false" label="nullTheater" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="500" y="0"/>    
+    <execution id="59">      
+      <position height="81" width="124" x="388" y="125"/>    
+    </execution>    
+    <execution id="62">      
+      <position height="81" width="124" x="388" y="233"/>    
+    </execution>    
+    <execution id="65">      
+      <position height="81" width="124" x="388" y="406"/>    
+    </execution>    
+    <execution id="68">      
+      <position height="81" width="124" x="388" y="552"/>    
+    </execution>    
+    <execution id="71">      
+      <position height="81" width="124" x="388" y="681"/>    
+    </execution>    
+    <execution id="74">      
+      <position height="81" width="124" x="388" y="801"/>    
+    </execution>  
+  </object>  
+  <object id="77" language="java" name="application.MovieTheater" project="GSUMovieTheatre" 
+    file="/GSUMovieTheatre/src/application/MovieTheater.java" binary="false" label="movieTheater" type="interface" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="602" y="0"/>    
+    <execution id="4">      
+      <position height="27" width="143" x="516" y="152"/>    
+    </execution>    
+    <execution id="7">      
+      <position height="27" width="143" x="516" y="289"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="27" width="143" x="516" y="446"/>    
+    </execution>    
+    <execution id="13">      
+      <position height="27" width="143" x="516" y="575"/>    
+    </execution>    
+    <execution id="16">      
+      <position height="27" width="143" x="516" y="718"/>    
+    </execution>    
+    <execution id="19">      
+      <position height="27" width="143" x="516" y="838"/>    
+    </execution>    
+    <execution id="23">      
+      <position height="27" width="143" x="516" y="152"/>    
+    </execution>    
+    <execution id="26">      
+      <position height="27" width="143" x="516" y="257"/>    
+    </execution>    
+    <execution id="29">      
+      <position height="27" width="143" x="516" y="381"/>    
+    </execution>    
+    <execution id="32">      
+      <position height="27" width="143" x="516" y="525"/>    
+    </execution>    
+    <execution id="35">      
+      <position height="27" width="143" x="516" y="649"/>    
+    </execution>    
+    <execution id="38">      
+      <position height="27" width="143" x="516" y="794"/>    
+    </execution>    
+    <execution id="42">      
+      <position height="27" width="143" x="516" y="206"/>    
+    </execution>    
+    <execution id="45">      
+      <position height="27" width="143" x="516" y="342"/>    
+    </execution>    
+    <execution id="48">      
+      <position height="27" width="143" x="516" y="489"/>    
+    </execution>    
+    <execution id="51">      
+      <position height="27" width="143" x="516" y="628"/>    
+    </execution>    
+    <execution id="54">      
+      <position height="27" width="143" x="516" y="762"/>    
+    </execution>    
+    <execution id="57">      
+      <position height="27" width="143" x="516" y="880"/>    
+    </execution>    
+    <execution id="61">      
+      <position height="27" width="143" x="516" y="152"/>    
+    </execution>    
+    <execution id="64">      
+      <position height="27" width="143" x="516" y="260"/>    
+    </execution>    
+    <execution id="67">      
+      <position height="27" width="143" x="516" y="433"/>    
+    </execution>    
+    <execution id="70">      
+      <position height="27" width="143" x="516" y="579"/>    
+    </execution>    
+    <execution id="73">      
+      <position height="27" width="143" x="516" y="708"/>    
+    </execution>    
+    <execution id="76">      
+      <position height="27" width="143" x="516" y="828"/>    
+    </execution>    
+    <execution id="78">      
+      <position height="27" width="143" x="516" y="125"/>    
+    </execution>    
+    <execution id="79">      
+      <position height="27" width="143" x="516" y="927"/>    
+    </execution>    
+    <execution id="80">      
+      <position height="27" width="143" x="516" y="750"/>    
+    </execution>    
+    <execution id="81">      
+      <position height="27" width="143" x="516" y="872"/>    
+    </execution>    
+    <execution id="82">      
+      <position height="27" width="143" x="516" y="490"/>    
+    </execution>  
+  </object>  
+  <object id="83" language="java" name="application.MovieController" project="GSUMovieTheatre" 
+    file="/GSUMovieTheatre/src/application/MovieController.java" binary="false" label="movieController" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="779" y="0"/>    
+    <execution id="84">      
+      <position height="81" width="163" x="663" y="225"/>    
+    </execution>    
+    <execution id="87">      
+      <position height="81" width="163" x="663" y="343"/>    
+    </execution>    
+    <execution id="90">      
+      <position height="81" width="163" x="663" y="473"/>    
+    </execution>    
+    <execution id="93">      
+      <position height="81" width="163" x="663" y="601"/>    
+    </execution>    
+    <execution id="96">      
+      <position height="81" width="163" x="663" y="125"/>    
+    </execution>    
+    <execution id="99">      
+      <position height="81" width="163" x="663" y="322"/>    
+    </execution>    
+    <execution id="102">      
+      <position height="81" width="163" x="663" y="98"/>    
+    </execution>    
+    <execution id="104">      
+      <position height="81" width="163" x="663" y="900"/>    
+    </execution>    
+    <execution id="106">      
+      <position height="81" width="163" x="663" y="723"/>    
+    </execution>    
+    <execution id="108">      
+      <position height="81" width="163" x="663" y="845"/>    
+    </execution>    
+    <execution id="110">      
+      <position height="81" width="163" x="663" y="463"/>    
+    </execution>  
+  </object>  
+  <object id="112" language="java" name="application.MovieControllerInterface" project="GSUMovieTheatre" 
+    file="/GSUMovieTheatre/src/application/MovieControllerInterface.java" binary="false" 
+    label="movieControllerInterface" type="interface" autoSize="true">    
+    <position height="-1" width="-1" x="942" y="0"/>    
+    <execution id="98">      
+      <position height="27" width="240" x="830" y="152"/>    
+    </execution>    
+    <execution id="101">      
+      <position height="27" width="240" x="830" y="349"/>    
+    </execution>    
+    <execution id="113">      
+      <position height="81" width="240" x="830" y="199"/>    
+    </execution>    
+    <execution id="116">      
+      <position height="81" width="240" x="830" y="309"/>    
+    </execution>    
+    <execution id="119">      
+      <position height="81" width="240" x="830" y="462"/>    
+    </execution>    
+    <execution id="122">      
+      <position height="27" width="240" x="830" y="597"/>    
+    </execution>  
+  </object>  
+  <object id="123" language="java" name="application.MovieView" project="GSUMovieTheatre" 
+    file="/GSUMovieTheatre/src/application/MovieView.java" binary="false" label="movieView" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="1212" y="0"/>    
+    <execution id="86">      
+      <position height="27" width="120" x="1074" y="252"/>    
+    </execution>    
+    <execution id="89">      
+      <position height="27" width="120" x="1074" y="370"/>    
+    </execution>    
+    <execution id="92">      
+      <position height="27" width="120" x="1074" y="500"/>    
+    </execution>    
+    <execution id="95">      
+      <position height="27" width="120" x="1074" y="628"/>    
+    </execution>    
+    <execution id="115">      
+      <position height="27" width="120" x="1074" y="226"/>    
+    </execution>    
+    <execution id="118">      
+      <position height="27" width="120" x="1074" y="336"/>    
+    </execution>    
+    <execution id="121">      
+      <position height="27" width="120" x="1074" y="489"/>    
+    </execution>    
+    <execution id="124">      
+      <position height="81" width="120" x="1074" y="570"/>    
+    </execution>    
+    <execution id="126">      
+      <position height="27" width="120" x="1074" y="152"/>    
+    </execution>    
+    <execution id="127">      
+      <position height="81" width="120" x="1074" y="98"/>    
+    </execution>    
+    <execution id="130">      
+      <position height="27" width="120" x="1074" y="471"/>    
+    </execution>    
+    <execution id="131">      
+      <position height="27" width="120" x="1074" y="749"/>    
+    </execution>  
+  </object>  
+  <object id="132" language="java" name="application.Main" project="GSUMovieTheatre" 
+    file="/GSUMovieTheatre/src/application/Main.java" binary="false" label="main" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="1289" y="0"/>    
+    <execution id="133">      
+      <position height="81" width="75" x="1198" y="125"/>    
+    </execution>  
+  </object>  
+  <object id="135" language="java" name="application.StateObserver" project="GSUMovieTheatre" 
+    file="/GSUMovieTheatre/src/application/StateObserver.java" binary="false" label="stateObserver" type="interface" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="1390" y="0"/>    
+    <execution id="129">      
+      <position height="27" width="150" x="1277" y="125"/>    
+    </execution>    
+    <execution id="136">      
+      <position height="81" width="150" x="1277" y="444"/>    
+    </execution>    
+    <execution id="138">      
+      <position height="81" width="150" x="1277" y="722"/>    
+    </execution>    
+    <execution id="140">      
+      <position height="81" width="150" x="1277" y="632"/>    
+    </execution>    
+    <execution id="143">      
+      <position height="81" width="150" x="1277" y="286"/>    
+    </execution>    
+    <execution id="146">      
+      <position height="81" width="150" x="1277" y="155"/>    
+    </execution>    
+    <execution id="149">      
+      <position height="81" width="150" x="1277" y="581"/>    
+    </execution>    
+    <execution id="152">      
+      <position height="81" width="150" x="1277" y="843"/>    
+    </execution>  
+  </object>  
+  <object id="155" language="java" name="application.MovieInterface" project="GSUMovieTheatre" 
+    file="/GSUMovieTheatre/src/application/MovieInterface.java" binary="false" label="movieInterface" type="interface" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="1534" y="0"/>    
+    <execution id="156">      
+      <position height="27" width="153" x="1431" y="211"/>    
+    </execution>    
+    <execution id="157">      
+      <position height="27" width="153" x="1431" y="408"/>    
+    </execution>    
+    <execution id="158">      
+      <position height="27" width="153" x="1431" y="339"/>    
+    </execution>    
+    <execution id="159">      
+      <position height="27" width="153" x="1431" y="152"/>    
+    </execution>    
+    <execution id="160">      
+      <position height="27" width="153" x="1431" y="561"/>    
+    </execution>    
+    <execution id="161">      
+      <position height="27" width="153" x="1431" y="531"/>    
+    </execution>    
+    <execution id="142">      
+      <position height="27" width="153" x="1431" y="659"/>    
+    </execution>    
+    <execution id="145">      
+      <position height="27" width="153" x="1431" y="313"/>    
+    </execution>    
+    <execution id="148">      
+      <position height="27" width="153" x="1431" y="182"/>    
+    </execution>    
+    <execution id="151">      
+      <position height="27" width="153" x="1431" y="608"/>    
+    </execution>  
+  </object>  
+  <object id="162" language="java" name="application.MovieFactory" project="GSUMovieTheatre" 
+    file="/GSUMovieTheatre/src/application/MovieFactory.java" binary="false" label="movieFactory" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="1551" y="0"/>    
+    <execution id="163">      
+      <position height="81" width="142" x="1588" y="184"/>    
+    </execution>    
+    <execution id="165">      
+      <position height="81" width="142" x="1588" y="381"/>    
+    </execution>    
+    <execution id="167">      
+      <position height="81" width="142" x="1588" y="312"/>    
+    </execution>    
+    <execution id="169">      
+      <position height="81" width="142" x="1588" y="125"/>    
+    </execution>    
+    <execution id="171">      
+      <position height="81" width="142" x="1588" y="534"/>    
+    </execution>    
+    <execution id="173">      
+      <position height="81" width="142" x="1588" y="504"/>    
+    </execution>    
+    <execution id="154">      
+      <position height="27" width="142" x="1588" y="870"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="getMovie(java.lang.String):java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="6" operation="getPrice(double):double" asynchronous="false">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="7"/>  
+  </message>  
+  <message id="9" operation="getName():java.lang.String" asynchronous="true">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="12" operation="getTickets(int):int" asynchronous="false">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="15" operation="getTime(java.lang.String):java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="18" operation="getTotal():double" asynchronous="false">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="19"/>  
+  </message>  
+  <message id="22" operation="getMovie(java.lang.String):java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="23"/>  
+  </message>  
+  <message id="25" operation="getName():java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="26"/>  
+  </message>  
+  <message id="28" operation="getPrice(double):double" asynchronous="false">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="29"/>  
+  </message>  
+  <message id="31" operation="getTickets(int):int" asynchronous="false">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="32"/>  
+  </message>  
+  <message id="34" operation="getTime(java.lang.String):java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="35"/>  
+  </message>  
+  <message id="37" operation="getTotal():double" asynchronous="false">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="38"/>  
+  </message>  
+  <message id="41" operation="getMovie(java.lang.String):java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="42"/>  
+  </message>  
+  <message id="44" operation="getName():java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="45"/>  
+  </message>  
+  <message id="47" operation="getPrice(double):double" asynchronous="false">    
+    <end type="SOURCE" refId="46"/>    
+    <end type="TARGET" refId="48"/>  
+  </message>  
+  <message id="50" operation="getTickets(int):int" asynchronous="false">    
+    <end type="SOURCE" refId="49"/>    
+    <end type="TARGET" refId="51"/>  
+  </message>  
+  <message id="53" operation="getTime(java.lang.String):java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="52"/>    
+    <end type="TARGET" refId="54"/>  
+  </message>  
+  <message id="56" operation="getTotal():double" asynchronous="false">    
+    <end type="SOURCE" refId="55"/>    
+    <end type="TARGET" refId="57"/>  
+  </message>  
+  <message id="60" operation="getMovie(java.lang.String):java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="59"/>    
+    <end type="TARGET" refId="61"/>  
+  </message>  
+  <message id="63" operation="getName():java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="62"/>    
+    <end type="TARGET" refId="64"/>  
+  </message>  
+  <message id="66" operation="getPrice(double):double" asynchronous="false">    
+    <end type="SOURCE" refId="65"/>    
+    <end type="TARGET" refId="67"/>  
+  </message>  
+  <message id="69" operation="getTickets(int):int" asynchronous="false">    
+    <end type="SOURCE" refId="68"/>    
+    <end type="TARGET" refId="70"/>  
+  </message>  
+  <message id="72" operation="getTime(java.lang.String):java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="71"/>    
+    <end type="TARGET" refId="73"/>  
+  </message>  
+  <message id="75" operation="getTotal():double" asynchronous="false">    
+    <end type="SOURCE" refId="74"/>    
+    <end type="TARGET" refId="76"/>  
+  </message>  
+  <message id="85" operation="update():void" asynchronous="false">    
+    <end type="SOURCE" refId="84"/>    
+    <end type="TARGET" refId="86"/>  
+  </message>  
+  <message id="88" operation="MovieView(application.MovieControllerInterface,application.MovieInterface)" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="87"/>    
+    <end type="TARGET" refId="89"/>  
+  </message>  
+  <message id="91" operation="displayResults():java.lang.Object" asynchronous="false">    
+    <end type="SOURCE" refId="90"/>    
+    <end type="TARGET" refId="92"/>  
+  </message>  
+  <message id="94" operation="createView():void" asynchronous="false">    
+    <end type="SOURCE" refId="93"/>    
+    <end type="TARGET" refId="95"/>  
+  </message>  
+  <message id="97" operation="getView():application.MovieView" asynchronous="false">    
+    <end type="SOURCE" refId="96"/>    
+    <end type="TARGET" refId="98"/>  
+  </message>  
+  <message id="100" operation="setMovie(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="99"/>    
+    <end type="TARGET" refId="101"/>  
+  </message>  
+  <message id="103" operation="getMovie(java.lang.String):java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="102"/>    
+    <end type="TARGET" refId="78"/>  
+  </message>  
+  <message id="105" operation="getTickets(int):int" asynchronous="false">    
+    <end type="SOURCE" refId="104"/>    
+    <end type="TARGET" refId="79"/>  
+  </message>  
+  <message id="107" operation="getTime(java.lang.String):java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="106"/>    
+    <end type="TARGET" refId="80"/>  
+  </message>  
+  <message id="109" operation="getPrice(double):double" asynchronous="false">    
+    <end type="SOURCE" refId="108"/>    
+    <end type="TARGET" refId="81"/>  
+  </message>  
+  <message id="111" operation="getTotal():double" asynchronous="false">    
+    <end type="SOURCE" refId="110"/>    
+    <end type="TARGET" refId="82"/>  
+  </message>  
+  <message id="114" operation="MovieView(application.MovieControllerInterface,application.MovieInterface)" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="113"/>    
+    <end type="TARGET" refId="115"/>  
+  </message>  
+  <message id="117" operation="update():void" asynchronous="false">    
+    <end type="SOURCE" refId="116"/>    
+    <end type="TARGET" refId="118"/>  
+  </message>  
+  <message id="120" operation="displayResults():java.lang.Object" asynchronous="false">    
+    <end type="SOURCE" refId="119"/>    
+    <end type="TARGET" refId="121"/>  
+  </message>  
+  <message id="125" operation="setTickets(int):void" asynchronous="false">    
+    <end type="SOURCE" refId="124"/>    
+    <end type="TARGET" refId="122"/>  
+  </message>  
+  <message id="128" operation="update():void" asynchronous="false">    
+    <end type="SOURCE" refId="127"/>    
+    <end type="TARGET" refId="129"/>  
+  </message>  
+  <message id="134" operation="createView():void" asynchronous="false">    
+    <end type="SOURCE" refId="133"/>    
+    <end type="TARGET" refId="126"/>  
+  </message>  
+  <message id="137" operation="MovieView(application.MovieControllerInterface,application.MovieInterface)" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="136"/>    
+    <end type="TARGET" refId="130"/>  
+  </message>  
+  <message id="139" operation="createView():void" asynchronous="false">    
+    <end type="SOURCE" refId="138"/>    
+    <end type="TARGET" refId="131"/>  
+  </message>  
+  <message id="141" operation="getTotal():double" asynchronous="false">    
+    <end type="SOURCE" refId="140"/>    
+    <end type="TARGET" refId="142"/>  
+  </message>  
+  <message id="144" operation="getPrice():double" asynchronous="false">    
+    <end type="SOURCE" refId="143"/>    
+    <end type="TARGET" refId="145"/>  
+  </message>  
+  <message id="147" operation="setTheatre(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="146"/>    
+    <end type="TARGET" refId="148"/>  
+  </message>  
+  <message id="150" operation="setMovie(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="149"/>    
+    <end type="TARGET" refId="151"/>  
+  </message>  
+  <message id="153" operation="setTickets(int):void" asynchronous="false">    
+    <end type="SOURCE" refId="152"/>    
+    <end type="TARGET" refId="154"/>  
+  </message>  
+  <message id="164" operation="registerObserver(application.StateObserver):void" asynchronous="false">    
+    <end type="SOURCE" refId="163"/>    
+    <end type="TARGET" refId="156"/>  
+  </message>  
+  <message id="166" operation="removeObserver(application.StateObserver):void" asynchronous="false">    
+    <end type="SOURCE" refId="165"/>    
+    <end type="TARGET" refId="157"/>  
+  </message>  
+  <message id="168" operation="setMovie(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="167"/>    
+    <end type="TARGET" refId="158"/>  
+  </message>  
+  <message id="170" operation="update(int):void" asynchronous="false">    
+    <end type="SOURCE" refId="169"/>    
+    <end type="TARGET" refId="159"/>  
+  </message>  
+  <message id="172" operation="getState():int" asynchronous="false">    
+    <end type="SOURCE" refId="171"/>    
+    <end type="TARGET" refId="160"/>  
+  </message>  
+  <message id="174" operation="setPrice(double):void" asynchronous="false">    
+    <end type="SOURCE" refId="173"/>    
+    <end type="TARGET" refId="161"/>  
+  </message>
+</sequence-diagram>

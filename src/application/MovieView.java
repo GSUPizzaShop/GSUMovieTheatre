@@ -188,7 +188,7 @@ public class MovieView implements StateObserver {
 		err.setHeaderText("WARNING");
 		err.setGraphic(new ImageView(logo));
 		
-		if(theater == "" || movie == "" || tickets == 0 || time == "") {
+		if(theater == "" || movie == "" || tickets == 0 || time == null) {
 			err.setContentText("You left something empty, review your order");
 			err.showAndWait();
 		}
@@ -198,21 +198,24 @@ public class MovieView implements StateObserver {
 				
 				alert.setContentText("Theater: " + amc.getName() + "\nMovie: " + amc.getMovie(movie) + "\nTime: " + amc.getTime(time) + "pm\nNum of Tickets: " + amc.getTickets(tickets) + "\nTotal: $" + amc.getTotal());
 				alert.showAndWait();
+				System.exit(0);
 			}
 			else if(theater == "Regal" ) {
 				MovieTheater reg = new FromRegal();
 				
 				alert.setContentText("Theater: " + reg.getName() + "\nMovie: " + reg.getMovie(movie) + "\nTime: " + reg.getTime(time) + "pm\nNum of Tickets: " + reg.getTickets(tickets) + "\nTotal: $" + reg.getTotal());
 				alert.showAndWait();
+				System.exit(0);
 			}
 			else if(theater == "Carmike" ) {
 				MovieTheater car = new FromCarmike();
 				
 				alert.setContentText("Theater: " + car.getName() + "\nMovie: " + car.getMovie(movie) + "\nTime: " + car.getTime(time) + "pm\nNum of Tickets: " + car.getTickets(tickets) + "\nTotal: $" + car.getTotal());
 				alert.showAndWait();
+				System.exit(0);
 			}
 		}
-		System.exit(0);
+		
 		return total;
 	}
 }
